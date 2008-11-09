@@ -38,14 +38,14 @@ single integer. Default is 80 (pixles).
 
 === rating
 What content to allow. Any of the following (default is X - ie all):
-  G:: A G rated gravatar is suitable for display on all websites with any
-      audience type.
-  PG:: PG rated gravatars may contain rude gestures, provocatively dressed
-       individuals, the lesser swear words, or mild violence.
-  R:: R rated gravatars may contain such things as harsh profanity, intense
-      violence, nudity, or hard drug use.
-  X:: X rated gravatars may contain hardcore sexual imagery or extremely
-      disturbing violence.
+G:: A G rated gravatar is suitable for display on all websites with any
+    audience type.
+PG:: PG rated gravatars may contain rude gestures, provocatively dressed
+     individuals, the lesser swear words, or mild violence.
+R:: R rated gravatars may contain such things as harsh profanity, intense
+    violence, nudity, or hard drug use.
+X:: X rated gravatars may contain hardcore sexual imagery or extremely
+    disturbing violence.
 
 === default
 The default image to serve up if email has no gravatar. This may be an URL to an
