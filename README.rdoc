@@ -1,8 +1,8 @@
 = eZGravatar
 
-Gravatars (http://www.gravatar.com) for eZ Publish (http://ez.no)
+Gravatars (<a href="http://www.gravatar.com">http://www.gravatar.com</a>) for eZ Publish (<a href="http://ez.no">http://ez.no</a>)
 
-http://www.cjohansen.no/projects/ezgravatar
+<a href="http://www.cjohansen.no/projects/ezgravatar">http://www.cjohansen.no/projects/ezgravatar</a>
 
 == Installation
 
@@ -12,17 +12,17 @@ install, than just getting the template and fixing your config.
 1. Copy the template to an active design folder like
    <tt>design/yourdesign/templates</tt> and use like so:
 
-  {include uri="design:gravatar.tpl"
-           email=$node.object.data_map.email
-           size=40}
+    {include uri="design:gravatar.tpl"
+             email=$node.object.data_map.email
+             size=40}
 
 2. The template requires an md5 template operator. The simplest way to
    provide such an operator is through template.ini/[PHP]/PHPOperatorList[],
    ie put the following in an override for template.ini (such as
    settings/override/template.ini.append):
 
-  [PHP]
-  PHPOperatorList[md5]=md5
+    [PHP]
+    PHPOperatorList[md5]=md5
 
 == gravatar.tpl
 
