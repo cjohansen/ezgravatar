@@ -26,43 +26,43 @@ install, than just getting the template and fixing your config.
 
 == gravatar.tpl
 
-Parameters
+Parameter name (default value)
 
-=== email
-Email address, either as a string or an attribute whose content is an email
-address
+<b>email</b>::
+  Email address, either as a string or an attribute whose content is an email
+  address
 
-=== size
-The desired size of the gravatar. Gravatars are square, so this should be a
-single integer. Default is 80 (pixles).
+<b>size</b>::
+  The desired size of the gravatar. Gravatars are square, so this should be a
+  single integer. Default is 80 (pixles).
 
-=== rating
-What content to allow. Any of the following (default is X - ie all):
-G:: A G rated gravatar is suitable for display on all websites with any
-    audience type.
-PG:: PG rated gravatars may contain rude gestures, provocatively dressed
-     individuals, the lesser swear words, or mild violence.
-R:: R rated gravatars may contain such things as harsh profanity, intense
-    violence, nudity, or hard drug use.
-X:: X rated gravatars may contain hardcore sexual imagery or extremely
-    disturbing violence.
+<b>rating</b>::
+  What content to allow. Any of the following (default is X - ie all):
+  <tt>G</tt>:: A G rated gravatar is suitable for display on all websites with any
+               audience type.
+  <tt>PG</tt>:: PG rated gravatars may contain rude gestures, provocatively dressed
+                individuals, the lesser swear words, or mild violence.
+  <tt>R</tt>:: R rated gravatars may contain such things as harsh profanity, intense
+               violence, nudity, or hard drug use.
+  <tt>X</tt>:: X rated gravatars may contain hardcore sexual imagery or extremely
+               disturbing violence.
 
-=== default
-The default image to serve up if email has no gravatar. This may be an URL to an
-image, or one of identicon, monsterid and wavatar. If the parameter is an empty
-string the default blue gravatar logo is used as default. Default may also be
-the string "random" which will choose either one of the defaults.
+<b>default</b>::
+  The default image to serve up if email has no gravatar. This may be an URL to an
+  image, or one of identicon, monsterid and wavatar. If the parameter is an empty
+  string the default blue gravatar logo is used as default. Default may also be
+  the string "random" which will choose either one of the defaults.
 
-=== alt
-The alt text for the image. Default is "Gravatar"
+<b>alt</b>::
+  The alt text for the image. Default is "Gravatar"
 
-=== class
-Optional class name for img tag
+<b>class</b>::
+  Optional class name for img tag
 
-=== id
-When using a random default image you may provide any id/number as a way of
-selecting default image. This way the pick is not actually random since you'll
-always get the same gravatar for the same id.
+<b>id+</b>::
+  When using a random default image you may provide any id/number as a way of
+  selecting default image. This way the pick is not actually random since you'll
+  always get the same gravatar for the same id.
 
 == LICENSE:
 
