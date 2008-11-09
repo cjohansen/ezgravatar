@@ -1,0 +1,77 @@
+= eZGravatar
+
+Gravatars (http://www.gravatar.com) for eZ Publish (http://ez.no)
+
+http://www.cjohansen.no/projects/ezgravatar
+
+== Installation
+
+No point in distributing this as a plugin as that would require more steps to
+install, than just getting the template and fixing your config.
+
+1. Copy the template to an active design folder like
+   <tt>design/yourdesign/templates</tt> and use like so:
+
+  {include uri="design:gravatar.tpl"
+           email=$node.object.data_map.email
+           size=40}
+
+2. The template requires an md5 template operator. The simplest way to
+   provide such an operator is through template.ini/[PHP]/PHPOperatorList[],
+   ie put the following in an override for template.ini (such as
+   settings/override/template.ini.append):
+
+  [PHP]
+  PHPOperatorList[md5]=md5
+
+== gravatar.tpl
+
+Parameters
+email      Email address, either as a string or an attribute whose content
+           is an email address
+size       The desired size of the gravatar. Gravatars are square, so this
+           should be a single integer. Default is 80 (pixles).
+rating     What content to allow. Any of the following (default is X - ie all):
+                G  - A G rated gravatar is suitable for display on all
+                     websites with any audience type.
+                PG - PG rated gravatars may contain rude gestures, provocatively
+                     dressed individuals, the lesser swear words, or mild violence.
+                R  - R rated gravatars may contain such things as harsh profanity,
+                     intense violence, nudity, or hard drug use.
+                X  - X rated gravatars may contain hardcore sexual imagery or
+                     extremely disturbing violence.
+default    The default image to serve up if email has no gravatar. This may be
+           an URL to an image, or one of identicon, monsterid and wavatar.
+           If the parameter is an empty string the default blue gravatar logo
+           is used as default. Default may also be the string "random" which
+           will choose either one of the defaults.
+alt        The alt text for the image. Default is "Gravatar"
+class      Optional class name for img tag
+id         When using a random default image you may provide any id/number as a
+           way of selecting default image. This way the pick is not actually random
+           since you'll always get the same gravatar for the same id.
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2008 Christian Johansen
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
